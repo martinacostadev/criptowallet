@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Cripo Wallet">
+	<main>
+		<section class="card">
+			<img src="/img/creditcard.png" width="400" height="400" alt="Credit Card" />
+		</section>
+
+		<h1>Cryptocurrency <span>Trading</span></h1>
+		<p class="description">
+			Instanly invest in 
+			<span>cryptocurrencies, exchange it and</span> 
+			<span>pay online with us!</span>
+		</p>
+
+		<section class="circle pulse">
+			<a href="/home">
+				<button />
+			</a>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		margin: 2rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	main {
+		margin: 0 auto;
+		padding: 2em;
+		max-width: 60ch;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card {
+		transform: rotate(-24deg);
+		animation: cardpulse 6s infinite;
+	}
+
+	.description {
+		text-align: center;
+		max-width: 30vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.circle {
+		width: 90px;
+		height: 90px;
+		border-radius: 90px;
+		border: 2px solid rgb(86, 86, 86);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	button {
+		width: 60px;
+		height: 60px;
+		border: 0;
+		border-radius: 60px;
+		background-image: url('/img/rightarrow.png');
+		background-size: 20px;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+		}
+
+		70% {
+			transform: scale(1.2);
+			box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		}
+
+		100% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		}
+	}
+
+	@keyframes cardpulse {
+		transform: rotate(-24deg);
+	
+		0% {
+			transform: scale(0.95);
+		}
+
+		70% {
+			transform: scale(1.1);
+		}
+
+		100% {
+			transform: scale(0.95);
+		}
+	}
+</style>

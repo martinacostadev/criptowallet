@@ -1,0 +1,238 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Cripo Wallet">
+	<main>
+		<header>
+            <div class="avatar">
+                <img src="/img/avatar.png" alt="Profile Avatar" />
+            </div>
+			
+            <div class="user">
+                Alix Woolley
+                <span>@alixwoolley</span>
+            </div>
+            <span class="notification" />
+		</header>
+
+        <div class="balance-text">Total Balance</div>
+        <div class="balance-amount">$125,098.36</div>
+
+        <h3>Activity</h3>
+
+		<section class="card-container">
+			<div class="card">
+                <div class="card-header">
+                    BTC
+                </div>
+                <div class="card-graphic">
+                    $45747,90
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    ETH
+                </div>
+                <div class="card-graphic">
+                    $13293,30
+                </div>
+            </div>
+		</section>
+
+		<section class="criptos">
+            <h3>Crypto Asset</h3>
+			<div class="cripto">
+                <div class="cripto-icon">
+                    <img src="/img/avatar.png" alt="Profile Avatar" />
+                </div>
+                <div class="cripto-name">
+                    Bitcoin
+                    <span>3.9 BTC</span>
+                </div>
+                <div class="cripto-amounts">
+                    $112,490.82
+                    <span class="cripto-porcentage">4.73%</span>
+                </div>
+            </div>
+
+            <div class="cripto">
+                <div class="cripto-icon">
+                    <img src="/img/avatar.png" alt="Profile Avatar" />
+                </div>
+                <div class="cripto-name">
+                    Ethereum
+                    <span>1.7 BTC</span>
+                </div>
+                <div class="cripto-amounts">
+                    $3,267.417
+                    <span class="cripto-porcentage">1.74%</span>
+                </div>
+            </div>
+		</section>
+	</main>
+
+    <nav>
+        <a href='/home'><img src="/img/avatar.png" alt="Profile Avatar" /></a>
+        <a href='/home'><img src="/img/avatar.png" alt="Profile Avatar" /></a>
+        <a href='/home'><img src="/img/avatar.png" alt="Profile Avatar" /></a>
+    </nav>
+</Layout>
+
+<style>
+    main {
+        padding: 2rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav {
+        background-color: #1D1D22;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 5;
+    }
+
+    nav a {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .avatar {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 2.2rem;
+        background-color: #d3d3d3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .avatar::after {
+        content: '';
+        position: absolute;
+        top: 2rem;
+        left: 3.6rem;
+        border: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #26FF8A;
+    }
+
+    img {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .user {
+        font-size: 0.9rem;
+        margin-left: 1rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .notification {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 2.2rem;
+        background-color: #212027;
+    }
+
+    .notification::after {
+        content: '';
+        position: absolute;
+        right: 2rem;
+        border: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #FDA2FF;
+        box-shadow: #FDA2FF 0px 22px 70px 4px;
+    }
+
+    .balance-text {
+        color: #A1A1A2;
+        margin-top: 2rem;
+    }
+
+    .balance-amount {
+        margin-top: 0.2rem;
+        font-weight: 600;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        widht: 100%;
+        height: 8rem;
+        gap: 0.4rem;
+    }
+
+    .card {
+        width: 10rem;
+        border: 1px solid gray;
+        border-radius: 1rem;
+        background-color: rgb(51, 52, 52);
+        height: 100%;
+        padding: 0.4rem;
+    }
+
+    .criptos {
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .cripto {
+        margin-bottom: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cripto-icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 0.2rem;
+        border: 0.2rem solid #5A5A5C;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cripto-name {
+        flex: 1;
+        margin-left: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .cripto-amounts {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
